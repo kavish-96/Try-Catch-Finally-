@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import CitiesPage from './pages/CitiesPage';
+import DashboardPage from './pages/DashboardPage';
+import SimulationPage from './pages/SimulationPage';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className="bg-indigo-400">URBANEXUS</h1>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/cities" element={<CitiesPage />} />
+        <Route path="/dashboard/:cityName" element={<DashboardPage />} />
+        <Route path="/simulation" element={<SimulationPage />} />
+      </Routes>
+    </Router>
   )
 }
 
