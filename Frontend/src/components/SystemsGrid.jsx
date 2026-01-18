@@ -30,8 +30,8 @@ const SystemsGrid = () => {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         className="group bg-slate-900/40 border border-slate-800 p-8 rounded-2xl backdrop-blur-sm hover:bg-slate-800/60 transition-colors"
                     >
-                        <div className={`w-12 h-12 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-center mb-6 group-hover:border-slate-700 transition-colors`}>
-                            <sys.icon className={`w-6 h-6 ${sys.color}`} />
+                        <div className={`w-16 h-16 rounded-xl bg-slate-950/80 border border-slate-800 flex items-center justify-center mb-6 shadow-lg shadow-black/40 group-hover:border-slate-600 group-hover:bg-slate-900 transition-all duration-300 group-hover:scale-110 group-hover:shadow-${sys.color.replace('text-', '')}/20`}>
+                            <sys.icon className={`w-8 h-8 ${sys.color} transition-transform duration-300`} />
                         </div>
 
                         <h3 className="text-xl font-bold text-white mb-3">{sys.title}</h3>
