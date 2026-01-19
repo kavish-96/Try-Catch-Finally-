@@ -244,7 +244,7 @@ const DashboardPage = () => {
                         chartData: [stats.humidity, stats.humidity, stats.humidity]
                     },
                     agriculture: {
-                        val: apiData.recent_crops && apiData.recent_crops.length > 0 ? apiData.recent_crops[0].yield_amount : 0,
+                        val: apiData.recent_crops && apiData.recent_crops.length > 0 ? Number(apiData.recent_crops[0].yield_amount).toFixed(2) : "0.00",
                         unit: "tons/ha",
                         label: "Crop Yield",
                         trend: "Stable",
